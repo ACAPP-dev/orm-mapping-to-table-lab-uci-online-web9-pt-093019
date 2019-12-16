@@ -2,9 +2,6 @@ class Student
 
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
-
-  @@all = []
-
   attr_accessor :name, :grade
   attr_reader :id
 
@@ -12,7 +9,6 @@ class Student
     @id = id
     @name = name
     @grade = grade
-    @@all << self
   end
 
   def self.all
@@ -42,7 +38,6 @@ class Student
   def self.create (attributes)
     attributes[:name]
     student = Student.new(attributes[:name], attributes[:grade])
-    #binding.pry
     student.save
     student
   end
