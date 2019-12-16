@@ -40,6 +40,10 @@ class Student
   end
 
   def self.create (attributes)
+    attributes.each do |key, value|
+      student = Student.new
+      student.send(("#{key}="), value)
+    end
     student = Student.new(name, grade)
 
 end
