@@ -44,5 +44,6 @@ class Student
     student = Student.new(attributes[:name], attributes[:grade])
     binding.pry
     student.save
+    student
   end
 end
