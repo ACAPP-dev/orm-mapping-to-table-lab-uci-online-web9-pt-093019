@@ -44,6 +44,6 @@ class Student
       student = Student.new
       student.send(("#{key}="), value)
     end
-    student = Student.new(name, grade)
-
+    #student = Student.new(name, grade)
+    self.save
 end
